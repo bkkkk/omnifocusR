@@ -1,0 +1,13 @@
+Package: omnifocusR
+Type: Package
+Title: Retrieve task and project data from your OmniFocus database
+Version: 0.1.0
+Author: Jacobo Blanco
+Maintainer: Jacobo Blanco <jayb88@gmail.com>
+Description:
+  omnifocusR lets you bring your OmniFocus data into R with an easy to use interface.
+  Task information is extracted from ofocus files, and converted into tidy format data frames
+  for plotting and analysis in R. At present, omnifocusR focuses (hihi) on retrieving and tidying
+  task and project information.
+License: What license is it under?
+LazyData: TRUE
