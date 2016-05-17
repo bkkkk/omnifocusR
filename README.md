@@ -30,3 +30,9 @@ tasks <- process_of_db("PATH_TO_CONTENTS.XML_FILE")
 ```
 
 This will return a data frame (wrapped as a *tbl_df*) that contains all the tasks in the ofocus file with context and project names.
+
+## TODO 
+
+* [ ] Enable processing directly onto ofocus exported package
+* [ ] Improve read speeds
+* [ ] Create a few sample analyses to bundle with omnifocusR
