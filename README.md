@@ -2,9 +2,11 @@
 
 [![Travis build status](https://travis-ci.org/bkkkk/omnifocusR.svg?branch=master)](https://travis-ci.org/bkkkk/omnifocusR)
 
-omnifocusR parses your OmniFocus data into a convenient data frame in tidy format ready for analysis.
+OmniFocus is an excellent task manager application for MacOS and iOS by the folks at [OmniGroup](https://www.omnigroup.com), it is based on the ideas of Getting Things Done, but supports other methodologies as well.
 
-omnifocusR is partially compatible with OmniFocus 3.
+omnifocusR converts your OmniFocus data into a convenient tidy data frame ready for analysis.
+
+omnifocusR is partially compatible with OmniFocus 3, primarily missing is multi-tagged task support.
 
 ## Installation
 
@@ -15,13 +17,13 @@ Get the development version from github:
 devtools::install_github("bkkkk/omnifocusR")
 ```
 
-## Using omnifocusr
+## Using omnifocusR
 
 To use omnifocusR you first need to export your database:
 
-1. File -> Export...
-2. Make sure to select *OmniFocus document* as the File Format
-3. Right-click on the newly exported ofocus package and select *Show Package Contents*
+1. In OmniFocus, go to *File -> Export...*
+2. Select *OmniFocus document* as the File Format
+3. Right-click on the newly exported `ofocus` package and select *Show Package Contents*
 4. Unzip the file to any location
 5. You will note that a single XML file called *contents.xml* was extracted
 6. In R:
