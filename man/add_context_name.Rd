@@ -20,4 +20,3 @@ However for analysis context name is far more useful
 This function takes context and task data frames and converts
 context ID to context name.
 }
-

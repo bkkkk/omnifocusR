@@ -15,4 +15,3 @@ data frame containing context name and internal ID
 \description{
 Retrieve contexts from OmniFocus database file
 }
-

@@ -17,4 +17,3 @@ data frame of tasks with project name added
 \description{
 Add project names to tasks information
 }
-
