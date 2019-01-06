@@ -23,7 +23,7 @@ tidy_projects <- function(.data) {
   .data <- mutate(
     .data,
     status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
-    flagged = if_else(is.na(.data$flagged), FALSE, as.logical(.data$flagged))
+    flagged = is_flagged(.data$flagged)
   )
   .data
 }
@@ -46,7 +46,7 @@ tidy_tasks <- function(.data) {
   )
   .data <- mutate(
     .data,
-    flagged = if_else(is.na(.data$flagged), FALSE, as.logical(.data$flagged))
+    flagged = is_flagged(.data$flagged)
   )
   select_(
     .data,
@@ -55,4 +55,8 @@ tidy_tasks <- function(.data) {
     "due", "completed", "start",
     "flagged"
   )
+}
+
+is_flagged <- function(x) {
+  if_else(is.na(x), FALSE, as.logical(x))
 }
