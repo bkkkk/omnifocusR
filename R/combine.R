@@ -30,6 +30,7 @@ add_project_name <- function(tasks, projects) {
 #'
 #' @importFrom dplyr select_ left_join
 add_context_name <- function(tasks, contexts) {
+  contexts <- select_(contexts, "context_id", context_name = "name")
   .data <- left_join(tasks, contexts, by = "context_id")
   select_(.data, "-context_id")
 }

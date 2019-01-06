@@ -23,7 +23,7 @@ tidy_projects <- function(.data) {
   .data <- mutate(
     .data,
     status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
-    flagged = ifelse(is.na(as.logical(.data$flagged)), FALSE, TRUE)
+    flagged = is_flagged(.data$flagged)
   )
   .data
 }
@@ -41,18 +41,29 @@ tidy_projects <- function(.data) {
 tidy_tasks <- function(.data) {
   .data <- mutate_at(
     .data,
-    vars(one_of("added", "start", "modified", "completed", "due")),
+    vars(one_of("added", "start", "completed", "due")),
     funs(ymd_hms)
   )
   .data <- mutate(
     .data,
-    flagged = ifelse(is.na(as.logical(.data$flagged)), FALSE, TRUE)
+    flagged = is_flagged(.data$flagged)
   )
   select_(
     .data,
     "task_id", "name", "context_id",
-    "project_id", "added", "modified",
+    "project_id", "added",
     "due", "completed", "start",
     "flagged"
   )
+}
+
+#' Converts the xml formatting of flagged data into an R logical object
+#'
+#' @param x a string
+#'
+#' @return logical that define if a task/project was flagged
+#' 
+#' @importFrom dplyr if_else
+is_flagged <- function(x) {
+  if_else(is.na(x), FALSE, as.logical(x))
 }
