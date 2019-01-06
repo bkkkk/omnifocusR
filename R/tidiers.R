@@ -23,7 +23,7 @@ tidy_projects <- function(.data) {
   .data <- mutate(
     .data,
     status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
-    flagged = ifelse(is.na(as.logical(.data$flagged)), FALSE, TRUE)
+    flagged = if_else(is.na(.data$flagged), FALSE, as.logical(.data$flagged))
   )
   .data
 }
