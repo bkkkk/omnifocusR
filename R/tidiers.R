@@ -41,17 +41,17 @@ tidy_projects <- function(.data) {
 tidy_tasks <- function(.data) {
   .data <- mutate_at(
     .data,
-    vars(one_of("added", "start", "modified", "completed", "due")),
+    vars(one_of("added", "start", "completed", "due")),
     funs(ymd_hms)
   )
   .data <- mutate(
     .data,
-    flagged = ifelse(is.na(as.logical(.data$flagged)), FALSE, TRUE)
+    flagged = if_else(is.na(.data$flagged), FALSE, as.logical(.data$flagged))
   )
   select_(
     .data,
     "task_id", "name", "context_id",
-    "project_id", "added", "modified",
+    "project_id", "added",
     "due", "completed", "start",
     "flagged"
   )
