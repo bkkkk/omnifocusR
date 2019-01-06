@@ -1,0 +1,1 @@
+rm(mock_mixed_document)
