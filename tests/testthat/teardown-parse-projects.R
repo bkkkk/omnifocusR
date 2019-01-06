@@ -1,0 +1,3 @@
+rm(result_dataframe_with_multiple_projects)
+rm(test_dataframe_with_multiple_projects)
+rm(test_document_with_multiple_projects)
