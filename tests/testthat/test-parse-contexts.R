@@ -21,5 +21,12 @@ mock_context_document <- function() {
 }
 
 test_that("Parsing multiple contexts works", {
+  doc <- mock_context_document()
   
+  result <- parse_contexts(doc)
+  
+  expected <- data_frame(id = c("nIr8xE7NZof", "lzWqVt0DKfG"), name = c("Waiting", "Home"))
+  
+  expect_length(result, 2)
+  expect_equal(result, expected)
 })
