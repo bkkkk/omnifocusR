@@ -57,6 +57,13 @@ tidy_tasks <- function(.data) {
   )
 }
 
+#' Converts the xml formatting of flagged data into an R logical object
+#'
+#' @param x a string
+#'
+#' @return logical that define if a task/project was flagged
+#' 
+#' @importFrom dplyr if_else
 is_flagged <- function(x) {
   if_else(is.na(x), FALSE, as.logical(x))
 }

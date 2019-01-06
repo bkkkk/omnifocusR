@@ -54,7 +54,7 @@ parse_project_node <- function(node, ns) {
 #' @importFrom xml2 xml_find_first xml_text
 parse_context_node <- function(node, ns) {
   list(
-    id = xml_text(xml_find_first(node, "@id", ns)),
+    context_id = xml_text(xml_find_first(node, "@id", ns)),
     name = xml_text(xml_find_first(node, "./d1:name", ns))
   )
 }
