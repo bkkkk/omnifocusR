@@ -3,7 +3,6 @@
 #' @param x the XML document in xml2 document format
 #'
 #' @return data frame containing project information
-#' @export
 #'
 #' @importFrom xml2 xml_find_all xml_ns
 #' @importFrom dplyr bind_rows

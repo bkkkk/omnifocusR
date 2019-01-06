@@ -1,4 +1,4 @@
-test_document_with_single_task <- read_xml('<?xml version="1.0" encoding="UTF-8"?>
+test_document_tasks <- read_xml('<?xml version="1.0" encoding="UTF-8"?>
            <omnifocus app-id="com.omnigroup.OmniFocus3" app-version="120.11.0.323402" machine-model="MacBookPro14,1" os-name="Mac OS X" os-version="10.14" xmlns="http://www.omnigroup.com/namespace/OmniFocus/v2">
            <task id="kWht8GKY4h8">
            <project/>
