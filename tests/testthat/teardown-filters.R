@@ -1,1 +1,1 @@
-rm(mock_mixed_document)
+rm(test_document_for_filters)

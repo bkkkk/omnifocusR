@@ -1,0 +1,1 @@
+rm(test_document_with_one_context)
