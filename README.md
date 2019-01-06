@@ -1,10 +1,10 @@
-# omnifocusr
+# omnifocusR
 
 [![Travis build status](https://travis-ci.org/bkkkk/omnifocusR.svg?branch=master)](https://travis-ci.org/bkkkk/omnifocusR)
 
-omnifocusr parses your OmniFocus data into a convenient data frame in tidy format ready for analysis.
+omnifocusR parses your OmniFocus data into a convenient data frame in tidy format ready for analysis.
 
-omnifocusR is compatible with OmniFocus 2.
+omnifocusR is partially compatible with OmniFocus 3.
 
 ## Installation
 
