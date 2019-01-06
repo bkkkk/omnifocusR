@@ -17,3 +17,10 @@ test_that("Filtering fopr context works", {
   expect_length(result, 1)
   expect_equal(xml_attr(result, 'id'), 'nIr8xE7NZof')
 })
+
+test_that("Filtering for task-to-tag works", {
+  result <- filter_task_to_tag(test_document_for_filters)
+  expect_length(result, 1)
+  expect_equal(xml_attr(result, 'id'), 'fhPlxmBdyCS.9.nFSbMtPEGrh')
+})
+

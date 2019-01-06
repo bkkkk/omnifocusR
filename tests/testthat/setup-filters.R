@@ -63,4 +63,11 @@ test_document_for_filters <-
            <rank>-1573330046</rank>
            <prohibits-next-action>true</prohibits-next-action>
            </context>
+           <task-to-tag id="fhPlxmBdyCS.9.nFSbMtPEGrh">
+		       <added order="21">2019-01-02T02:10:31.370Z</added>
+		       <task idref="fhPlxmBdyCS.9"/>
+		       <context idref="nFSbMtPEGrh"/>
+		       <rank-in-task>0001</rank-in-task>
+		       <rank-in-tag/>
+	         </task-to-tag>
            </omnifocus>')
