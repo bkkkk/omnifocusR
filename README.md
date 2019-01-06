@@ -1,6 +1,6 @@
 # omnifocusR
 
-[![Travis build status](https://travis-ci.org/bkkkk/omnifocusR.svg?branch=master)](https://travis-ci.org/bkkkk/omnifocusR)
+[![Travis build status](https://travis-ci.org/bkkkk/omnifocusR.svg?branch=master)](https://travis-ci.org/bkkkk/omnifocusR)  [![Codecov test coverage](https://codecov.io/gh/bkkkk/omnifocusR/branch/master/graph/badge.svg)](https://codecov.io/gh/bkkkk/omnifocusR?branch=master)
 
 OmniFocus is an excellent task manager application for MacOS and iOS by the folks at [OmniGroup](https://www.omnigroup.com), it is based on the ideas of Getting Things Done, but supports other methodologies as well.
 
