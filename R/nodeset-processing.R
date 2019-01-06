@@ -1,6 +1,8 @@
 #' Retrieve projects from OmniFocus database file
 #'
 #' @param x the XML document in xml2 document format
+#' @param filter a function that takes an xml_document and returns an xml_nodeset, used to filter for xml tags
+#' @param parser a function which takes an xml_node and returns a list, used to parse an xml node into a list
 #'
 #' @return data frame containing project information
 #'

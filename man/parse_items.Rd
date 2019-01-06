@@ -8,6 +8,10 @@ parse_items(x, filter, parser)
 }
 \arguments{
 \item{x}{the XML document in xml2 document format}
+
+\item{filter}{a function that takes an xml_document and returns an xml_nodeset, used to filter for xml tags}
+
+\item{parser}{a function which takes an xml_node and returns a list, used to parse an xml node into a list}
 }
 \value{
 data frame containing project information

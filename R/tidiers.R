@@ -7,6 +7,7 @@
 #'
 #' @importFrom dplyr select_ mutate_at mutate funs vars
 #' @importFrom lubridate ymd_hms
+#' @importFrom rlang .data
 tidy_projects <- function(.data) {
   .data <- select_(
     .data,
@@ -21,8 +22,8 @@ tidy_projects <- function(.data) {
   )
   .data <- mutate(
     .data,
-    status = as.factor(ifelse(is.na(status), "active", status)),
-    flagged = ifelse(is.na(as.logical(flagged)), FALSE, TRUE)
+    status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
+    flagged = ifelse(is.na(as.logical(.data$flagged)), FALSE, TRUE)
   )
   .data
 }
@@ -34,8 +35,9 @@ tidy_projects <- function(.data) {
 #' @return data frame containing task information in tidy format
 #' @export
 #'
-#' @importFrom dplyr mutate_at mutate select_ funs vars contains
+#' @importFrom dplyr mutate_at mutate select_ funs vars one_of
 #' @importFrom lubridate ymd_hms
+#' @importFrom rlang .data
 tidy_tasks <- function(.data) {
   .data <- mutate_at(
     .data,
@@ -44,7 +46,7 @@ tidy_tasks <- function(.data) {
   )
   .data <- mutate(
     .data,
-    flagged = ifelse(is.na(as.logical(flagged)), FALSE, TRUE)
+    flagged = ifelse(is.na(as.logical(.data$flagged)), FALSE, TRUE)
   )
   select_(
     .data,
