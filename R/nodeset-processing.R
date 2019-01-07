@@ -43,3 +43,13 @@ parse_tasks <- function(x) {
 parse_contexts <- function(x) {
   parse_items(x, filter_contexts, parse_context_node)
 }
+
+#' Retrieve task-to-tag nodes from OmniFocus database file
+#'
+#' @param x the XML document in xml2 document format
+#'
+#' @return data frame in raw format containing task-to-tag associations
+#' @export
+parse_task_to_tags <- function(x) {
+  parse_items(x, filter_task_to_tag, parse_task_to_tag_node)
+}
