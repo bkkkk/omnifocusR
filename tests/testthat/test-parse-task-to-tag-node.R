@@ -7,7 +7,7 @@ test_that("Task to tag parsing works", {
   result <- parse_task_to_tag_node(node, ns)
   
   expect_length(result, 3)
-  expect_equal(result$task_id, "fhPlxmBdyCS.9")
-  expect_equal(result$tag_id, "nFSbMtPEGrh")
-  expect_equal(result$rank, 1)
+  expect_equal(result$task_id, "XKjx-azQ6Cq")
+  expect_equal(result$tag_id, "osOs7sKsHJ5")
+  expect_equal(result$rank, "d06b")
 })

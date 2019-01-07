@@ -66,11 +66,11 @@ parse_context_node <- function(node, ns) {
 #'
 #' @return list containing the data of a single task-to-tag
 #' 
-#' @importFrom xml2 xml_find_first xml_integer xml_attr
+#' @importFrom xml2 xml_find_first xml_text xml_attr
 parse_task_to_tag_node <- function(node, ns) {
   list(
     task_id = xml_attr(xml_find_first(node, "d1:task", ns), "idref", ns),
     tag_id = xml_attr(xml_find_first(node, "d1:context", ns), "idref", ns),
-    rank = xml_integer(xml_find_first(node, "d1:rank-in-task", ns))
+    rank = xml_text(xml_find_first(node, "d1:rank-in-task", ns))
   )
 }
