@@ -1,4 +1,4 @@
-context("test-task-to-tag-parsing")
+context("test-parse-task-to-tag-node")
 
 test_that("Task to tag parsing works", {
   ns <- xml_ns(test_document_task_to_tag)
