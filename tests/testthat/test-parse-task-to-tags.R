@@ -5,5 +5,5 @@ test_that("Parsing multiple task to tags works", {
   
   expect_equal(nrow(result), 3)
   expect_equal(result$task_id, c("XKjx-azQ6Cq", "bJ9xiUfw3-t", "kx7HP9SGmGx"))
-  expect_equal(result$tag_id, c("osOs7sKsHJ5", "osOs7sKsHJ5", "nFSbMtPEGrh"))
+  expect_equal(result$context_id, c("osOs7sKsHJ5", "osOs7sKsHJ5", "nFSbMtPEGrh"))
 })

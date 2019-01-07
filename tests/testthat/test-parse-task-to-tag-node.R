@@ -8,6 +8,6 @@ test_that("Task to tag parsing works", {
   
   expect_length(result, 3)
   expect_equal(result$task_id, "XKjx-azQ6Cq")
-  expect_equal(result$tag_id, "osOs7sKsHJ5")
+  expect_equal(result$context_id, "osOs7sKsHJ5")
   expect_equal(result$rank, "d06b")
 })
