@@ -39,4 +39,4 @@ This will return a data frame (wrapped as a *tbl_df*) that contains all the task
 
 ## Disclaimer
 
-This project and it's contributors are not related in any way, shape or form to the OmniGroup or any organization related to them. This package was not built, tested, sanctioned, blessed, approved by the OmniGroup, nor is it maintained by them. They probably haven't got a clue that it exists. If something breaks because you used it, it's on you. I make no claims to OmniFocus or any of the OmniGroup applications, they are awesome and you should use them.
+This project and it's contributors are not related in any way, shape or form to the OmniGroup or any organization related to them. This package was not built, tested, sanctioned, blessed, approved by the OmniGroup, nor is it maintained by them. They probably haven't got a clue that it exists. If something breaks because you used it, it's on you. I make no claims to OmniFocus or any of the OmniGroup applications, they are awesome and you should use them folks.
