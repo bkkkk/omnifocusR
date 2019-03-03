@@ -1,3 +1,8 @@
+library(tidyr)
+library(dplyr)
+library(xml2)
+library(tibble)
+
 test_document_with_simple_project <- read_xml('<?xml version="1.0" encoding="UTF-8"?>
            <omnifocus app-id="com.omnigroup.OmniFocus3" app-version="120.11.0.323402" machine-model="MacBookPro14,1" os-name="Mac OS X" os-version="10.14" xmlns="http://www.omnigroup.com/namespace/OmniFocus/v2">
            <task id="py39KH8utgc">
