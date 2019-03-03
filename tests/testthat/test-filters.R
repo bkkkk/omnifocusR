@@ -1,4 +1,4 @@
-context("test-filter-tasks")
+context("test-filters")
 
 test_that("Filtering for projects works", {
   result <- filter_projects(test_document_for_filters)
