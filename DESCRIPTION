@@ -15,6 +15,7 @@ Description: omnifocusR lets you bring your OmniFocus data into R with an
 License: GPL (>= 2)
 Imports:
   dplyr,
+  tidyr,
   xml2,
   lubridate,
   tibble,
