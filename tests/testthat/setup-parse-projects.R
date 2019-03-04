@@ -1,5 +1,3 @@
-library(dplyr)
-
 result_dataframe_with_multiple_projects <- data_frame(
   project_id = c("OepwndhgNNE", "py39KH8utgc"), 
   name = c("Have shared Opening Balance codebase with KPMG", "Skills to Learn SM"),

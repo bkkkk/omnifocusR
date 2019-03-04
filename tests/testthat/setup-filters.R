@@ -1,3 +1,8 @@
+library(tidyr)
+library(dplyr)
+library(xml2)
+library(tibble)
+
 test_document_for_filters <-
   read_xml('<?xml version="1.0" encoding="UTF-8"?>
            <omnifocus app-id="com.omnigroup.OmniFocus3" app-version="120.11.0.323402" machine-model="MacBookPro14,1" os-name="Mac OS X" os-version="10.14" xmlns="http://www.omnigroup.com/namespace/OmniFocus/v2">
@@ -63,4 +68,11 @@ test_document_for_filters <-
            <rank>-1573330046</rank>
            <prohibits-next-action>true</prohibits-next-action>
            </context>
+           <task-to-tag id="fhPlxmBdyCS.9.nFSbMtPEGrh">
+		       <added order="21">2019-01-02T02:10:31.370Z</added>
+		       <task idref="fhPlxmBdyCS.9"/>
+		       <context idref="nFSbMtPEGrh"/>
+		       <rank-in-task>0001</rank-in-task>
+		       <rank-in-tag/>
+	         </task-to-tag>
            </omnifocus>')
