@@ -5,11 +5,11 @@
 #' @return data frame containing project information in tidy format
 #' @export
 #'
-#' @importFrom dplyr select_ mutate_at mutate funs vars
+#' @importFrom dplyr select mutate_at mutate funs vars
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
 tidy_projects <- function(.data) {
-  .data <- select_(
+  .data <- select(
     .data,
     "project_id", "name", "status",
     "added", "completed", "folder_id",
@@ -35,7 +35,7 @@ tidy_projects <- function(.data) {
 #' @return data frame containing task information in tidy format
 #' @export
 #'
-#' @importFrom dplyr mutate_at mutate select_ funs vars one_of
+#' @importFrom dplyr mutate_at mutate select funs vars one_of
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
 tidy_tasks <- function(.data) {
@@ -48,7 +48,7 @@ tidy_tasks <- function(.data) {
     .data,
     flagged = is_flagged(.data$flagged)
   )
-  select_(
+  select(
     .data,
     "task_id", "name", "context_id",
     "project_id", "added",

@@ -6,11 +6,11 @@
 #' @return data frame of tasks with project name added
 #' @export
 #'
-#' @importFrom dplyr select_ left_join
+#' @importFrom dplyr select left_join
 add_project_name <- function(tasks, projects) {
-  projects <- select_(projects, "project_id", project_name = "name")
+  projects <- select(projects, "project_id", "project_name" = "name")
   .data <- left_join(tasks, projects, by = "project_id")
-  select_(.data, "-project_id")
+  select(.data, -"project_id")
 }
 
 
@@ -28,11 +28,11 @@ add_project_name <- function(tasks, projects) {
 #' @return data frame of task information with named context
 #' @export
 #'
-#' @importFrom dplyr select_ left_join
+#' @importFrom dplyr select left_join
 #' @importFrom tidyr nest unnest
 add_context_name <- function(tasks, contexts) {
-  contexts <- select_(contexts, "context_id", context_name = "name")
+  contexts <- select(contexts, "context_id", "context_name" = "name")
   tasks <- unnest(tasks)
   .data <- left_join(tasks, contexts, by = "context_id")
-  nest(.data, context_id, context_name, .key = "tags")
+  nest(.data, "context_id", "context_name", .key = "tags")
 }

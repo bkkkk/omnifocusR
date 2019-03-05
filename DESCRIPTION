@@ -25,3 +25,4 @@ RoxygenNote: 6.1.1
 Suggests: 
     testthat,
     covr
+Encoding: UTF-8

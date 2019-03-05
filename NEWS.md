@@ -4,3 +4,4 @@
 * Updated package to minimal support for OmniFocus 3
 * Added tests for all functions
 * Added a `NEWS.md` file to track changes to the package.
+* Prepared for release to CRAN
