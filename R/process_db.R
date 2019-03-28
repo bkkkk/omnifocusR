@@ -9,7 +9,7 @@
 #' 
 #' @examples
 #' \dontrun{
-#' process_of_db("~/Downloads/OmniFocus/contents.xml")
+#' of_data <- process_of_db("~/Downloads/OmniFocus/contents.xml")
 #' }
 process_of_db <- function(path) {
   xml_doc <- read_xml(path)
