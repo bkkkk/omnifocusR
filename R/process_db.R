@@ -27,4 +27,3 @@ process_of_db <- function(path) {
 
   return(result)
 }
-
