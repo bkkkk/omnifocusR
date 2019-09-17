@@ -6,6 +6,11 @@
 #' @export
 #'
 #' @importFrom xml2 read_xml
+#' 
+#' @examples
+#' \dontrun{
+#' of_data <- process_of_db("~/Downloads/OmniFocus/contents.xml")
+#' }
 process_of_db <- function(path) {
   xml_doc <- read_xml(path)
 
@@ -22,4 +27,3 @@ process_of_db <- function(path) {
 
   return(result)
 }
-

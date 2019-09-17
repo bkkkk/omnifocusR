@@ -15,3 +15,8 @@ data frame containing task information in tidy format
 \description{
 Process an OmniFocus content XML file
 }
+\examples{
+\dontrun{
+process_of_db("~/Downloads/OmniFocus/contents.xml")
+}
+}

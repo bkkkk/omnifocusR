@@ -3,7 +3,6 @@
 #' @param .data the data frame constructed by parse_projects
 #'
 #' @return data frame containing project information in tidy format
-#' @export
 #'
 #' @importFrom dplyr select mutate_at mutate funs vars
 #' @importFrom lubridate ymd_hms
@@ -33,7 +32,6 @@ tidy_projects <- function(.data) {
 #' @param .data the data frame constructed by parse_tasks
 #'
 #' @return data frame containing task information in tidy format
-#' @export
 #'
 #' @importFrom dplyr mutate_at mutate select funs vars one_of
 #' @importFrom lubridate ymd_hms
