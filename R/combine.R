@@ -4,7 +4,6 @@
 #' @param projects data frame with tidy project information
 #'
 #' @return data frame of tasks with project name added
-#' @export
 #'
 #' @importFrom dplyr select left_join
 add_project_name <- function(tasks, projects) {
@@ -26,7 +25,6 @@ add_project_name <- function(tasks, projects) {
 #' @param contexts data frame with tidy context information
 #'
 #' @return data frame of task information with named context
-#' @export
 #'
 #' @importFrom dplyr select left_join
 #' @importFrom tidyr nest unnest
