@@ -8,8 +8,6 @@ OmniFocus is an excellent task manager application for MacOS and iOS by the folk
 
 omnifocusR converts your OmniFocus data into a convenient tidy data frame ready for analysis.
 
-omnifocusR is partially compatible with OmniFocus 3, primarily missing is multi-tagged task support.
-
 ## Installation
 
 ```r
@@ -33,7 +31,7 @@ To use omnifocusR you first need to export your database:
 tasks <- process_of_db("PATH_TO_CONTENTS.XML_FILE")
 ```
 
-This will return a data frame (wrapped as a *tbl_df*) that contains all the tasks in the ofocus file with context and project names.
+This will return a tibble that contains all the tasks in the ofocus file with context and project names.
 
 ----
 
