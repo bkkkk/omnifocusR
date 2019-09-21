@@ -1,7 +1,7 @@
 Package: omnifocusR
 Type: Package
 Title: Retrieve Task and Project Data from your OmniFocus Database
-Version: 1.0.1
+Version: 1.0.2
 Author: Jacobo Blanco
 Maintainer: Jacobo Blanco <jayb88@gmail.com>
 Description: Extracts task information from the 'OmniFocus' to-do application into tidy
