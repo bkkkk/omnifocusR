@@ -17,6 +17,6 @@ Process an OmniFocus content XML file
 }
 \examples{
 \dontrun{
-process_of_db("~/Downloads/OmniFocus/contents.xml")
+of_data <- process_of_db("~/Downloads/OmniFocus/contents.xml")
 }
 }
