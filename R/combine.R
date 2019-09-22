@@ -12,7 +12,7 @@ add_project_name <- function(tasks, projects) {
       select(projects, project_id, project_name = name),
       by = "project_id"
     ) %>%
-    select(-"project_id")
+    select(-project_id)
 }
 
 
