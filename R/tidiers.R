@@ -19,8 +19,8 @@ tidy_projects <- function(.data) {
       list(ymd_hms)
     ) %>%
     mutate(
-      status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
-      flagged = is_flagged(.data$flagged)
+      status = as.factor(ifelse(is.na(status), "active", status)),
+      flagged = is_flagged(flagged)
     )
 }
 
