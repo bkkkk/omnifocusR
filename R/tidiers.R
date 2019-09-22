@@ -8,23 +8,20 @@
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
 tidy_projects <- function(.data) {
-  .data <- select(
-    .data,
-    project_id, name, status,
-    added, completed, folder_id,
-    context_id, start, flagged, due
-  )
-  .data <- mutate_at(
-    .data,
-    vars(due, start, added, completed),
-    list(ymd_hms)
-  )
-  .data <- mutate(
-    .data,
-    status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
-    flagged = is_flagged(.data$flagged)
-  )
-  .data
+  .data %>%
+    select(
+      project_id, name, status,
+      added, completed, folder_id,
+      context_id, start, flagged, due
+    ) %>%
+    mutate_at(
+      vars(due, start, added, completed),
+      list(ymd_hms)
+    ) %>%
+    mutate(
+      status = as.factor(ifelse(is.na(.data$status), "active", .data$status)),
+      flagged = is_flagged(.data$flagged)
+    )
 }
 
 #' Tidy task data retrieved from OmniFocus database file
