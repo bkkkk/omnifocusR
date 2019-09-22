@@ -10,13 +10,13 @@
 tidy_projects <- function(.data) {
   .data <- select(
     .data,
-    "project_id", "name", "status",
-    "added", "completed", "folder_id",
-    "context_id", "start", "flagged", "due"
+    project_id, name, status,
+    added, completed, folder_id,
+    context_id, start, flagged, due
   )
   .data <- mutate_at(
     .data,
-    vars("due", "start", "added", "completed"),
+    vars(due, start, added, completed),
     list(ymd_hms)
   )
   .data <- mutate(
@@ -48,10 +48,10 @@ tidy_tasks <- function(.data) {
   )
   select(
     .data,
-    "task_id", "name", "context_id",
-    "project_id", "added",
-    "due", "completed", "start",
-    "flagged"
+    task_id, name, context_id,
+    project_id, added,
+    due, completed, start,
+    flagged
   )
 }
 
