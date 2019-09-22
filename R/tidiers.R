@@ -4,7 +4,7 @@
 #'
 #' @return data frame containing project information in tidy format
 #'
-#' @importFrom dplyr select mutate_at mutate funs vars
+#' @importFrom dplyr select mutate_at mutate vars
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
 tidy_projects <- function(.data) {
@@ -30,7 +30,7 @@ tidy_projects <- function(.data) {
 #'
 #' @return data frame containing task information in tidy format
 #'
-#' @importFrom dplyr mutate_at mutate select funs vars one_of
+#' @importFrom dplyr mutate_at mutate select vars one_of
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
 tidy_tasks <- function(.data) {
