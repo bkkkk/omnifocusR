@@ -30,7 +30,7 @@ add_project_name <- function(tasks, projects) {
 #' @importFrom tidyr nest unnest
 add_context_name <- function(tasks, contexts) {
   contexts <- select(contexts, "context_id", "context_name" = "name")
-  tasks <- unnest(tasks)
+  tasks <- unnest(tasks, cols = c(context_id))
   .data <- left_join(tasks, contexts, by = "context_id")
-  nest(.data, "context_id", "context_name", .key = "tags")
+  nest(.data, tags = c(context_id, context_name))
 }

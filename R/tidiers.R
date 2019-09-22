@@ -17,7 +17,7 @@ tidy_projects <- function(.data) {
   .data <- mutate_at(
     .data,
     vars("due", "start", "added", "completed"),
-    funs(ymd_hms)
+    list(ymd_hms)
   )
   .data <- mutate(
     .data,
@@ -40,7 +40,7 @@ tidy_tasks <- function(.data) {
   .data <- mutate_at(
     .data,
     vars(one_of("added", "start", "completed", "due")),
-    funs(ymd_hms)
+    list(ymd_hms)
   )
   .data <- mutate(
     .data,
