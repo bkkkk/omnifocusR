@@ -34,22 +34,18 @@ tidy_projects <- function(.data) {
 #' @importFrom lubridate ymd_hms
 #' @importFrom rlang .data
 tidy_tasks <- function(.data) {
-  .data <- mutate_at(
-    .data,
-    vars(one_of("added", "start", "completed", "due")),
-    list(ymd_hms)
-  )
-  .data <- mutate(
-    .data,
-    flagged = is_flagged(.data$flagged)
-  )
-  select(
-    .data,
-    task_id, name, context_id,
-    project_id, added,
-    due, completed, start,
-    flagged
-  )
+  .data %>%
+    mutate_at(
+      vars(one_of("added", "start", "completed", "due")),
+      list(ymd_hms)
+    ) %>%
+    mutate(flagged = is_flagged(flagged)) %>%
+    select( 
+      task_id, name, context_id,
+      project_id, added,
+      due, completed, start,
+      flagged
+    )
 }
 
 #' Converts the xml formatting of flagged data into an R logical object
