@@ -1,4 +1,7 @@
-result_dataframe_with_multiple_projects <- data_frame(
+library(dplyr)
+library(tibble)
+
+result_dataframe_with_multiple_projects <- tibble(
   project_id = c("OepwndhgNNE", "py39KH8utgc"), 
   name = c("Have shared Opening Balance codebase with KPMG", "Skills to Learn SM"),
   status = factor(c("done", "active"), levels = c("active", "done")),
@@ -11,7 +14,7 @@ result_dataframe_with_multiple_projects <- data_frame(
   due = ymd_hms(c("2018-11-05T23:00:00.000Z", NA))
 )
 
-test_dataframe_with_multiple_projects <- dplyr::arrange(data_frame(
+test_dataframe_with_multiple_projects <- arrange(tibble(
     project_id = c("OepwndhgNNE", "py39KH8utgc"), 
     name = c("Have shared Opening Balance codebase with KPMG", "Skills to Learn SM"),
     folder_id = c("aWCtbrgg6in", "j-oFhs5nHjX"),
