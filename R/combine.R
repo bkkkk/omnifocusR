@@ -31,6 +31,6 @@ add_project_name <- function(tasks, projects) {
 add_context_name <- function(tasks, contexts) {
   contexts <- select(contexts, context_id, context_name = name)
   tasks <- unnest(tasks, cols = c(context_id))
-  .data <- left_join(tasks, contexts, by = "context_id")
-  nest(.data, tags = c(context_id, context_name))
+  left_join(tasks, contexts, by = "context_id") %>%
+    nest(tags = c(context_id, context_name))
 }
