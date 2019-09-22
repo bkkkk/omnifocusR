@@ -7,11 +7,13 @@
 #'
 #' @importFrom dplyr select left_join
 add_project_name <- function(tasks, projects) {
-  projects <- select(projects, "project_id", "project_name" = "name")
-  .data <- left_join(tasks, projects, by = "project_id")
-  select(.data, -"project_id")
+  tasks %>%
+    left_join(
+      select(projects, project_id, project_name = name),
+      by = "project_id"
+    ) %>%
+    select(-"project_id")
 }
-
 
 
 #' Add context names to tasks information
